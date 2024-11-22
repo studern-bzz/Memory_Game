@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: red; /* Rückseite der Karte */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card.flipped {
+    background-color: white; /* Vorderseite der Karte */
+    color: #333;
+    cursor: default;
+    transform: rotateX(360deg); /* Animierter Effekt */
+    transform-style: preserve-3d;
+}
+
+.card.matched {
+    background-color: #ccc;
+    color: #999;
+    cursor: default;
+    transform: none;
+}
+
+.stopwatch {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+
+#restart {
+    background-color: #008cba;
+    color: white;
+}
+
+#restart:hover {
+    background-color: #007bb5;
+}
